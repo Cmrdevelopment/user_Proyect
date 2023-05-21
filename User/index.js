@@ -20,6 +20,7 @@ const PORT = process.env.PORT;
 
 //! configurar las cors QUE SON LOS LIMITES AL ACCESO DE NUESTRA API, debe estar debajo de crear el servidor
 const cors = require('cors');
+
 app.use(
   cors({
     origin: '*',
@@ -32,9 +33,10 @@ app.use(express.json({ limit: '5mb' }));
 app.use(express.urlencoded({ limit: '5mb', extended: true }));
 
 //! -----ROUTES-----------
-const UserRoutes = require('./src/api/routes/user.routes'); // nos las importamos aquí y viene de user.model porque es index quien las consume
-
-app.use('/api/v1/users', UserRoutes); // Está es la ruta general
+// nos las importamos aquí y viene de user.model porque es index quien las consume
+const UserRoutes = require('./src/api/routes/user.routes');
+// Está es la ruta general
+app.use('/api/v1/users', UserRoutes);
 
 //! Cuando no se mete ninguna routa
 app.use('*', (req, res, next) => {

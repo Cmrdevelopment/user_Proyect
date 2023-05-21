@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "script": "node index.js",
-    "dev": "nodemom index.js",
+    "dev": "nodemon index.js",
     "format:check": "prettier --check",
     "format:write": "prettier --write",
     "test": "jest --runInBand --detectOpenHandles --forceExit",

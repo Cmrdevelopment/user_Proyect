@@ -13,8 +13,15 @@ const {
   deleteUser,
 } = require('../controllers/user.controllers');
 
-const express = require('express'); // libreria para hacer el servidor web, hacer peticiones al HTTP, se utiliza para crear api y para manejar las rutas
-const UserRoutes = express.Router(); // Aquí estamos configurando el routes de la aplicación
+// Hacemos la constante y configuramos las routes de la aplicación, 2 formas: 1 linea ó 2 lineas
+// 1ª forma
+//const UserRoutes = require('express').Router();
+
+// 2ª forma
+// Traemos la libreria para hacer el servidor web, hacer peticiones al HTTP, se utiliza para crear api y para manejar las rutas
+const express = require('express');
+// Aquí estamos configurando el routes de la aplicación
+const UserRoutes = express.Router();
 
 UserRoutes.get('/register', upload.single('image'), registerWithRedirect);
 UserRoutes.post('/register', upload.single('image'), registerSlow);

@@ -1,4 +1,4 @@
-// tenemos que traernos dotenv porque tenmos la url que no queremos que se comparta publicamente
+// tenemos que traernos dotenv porque tenemos la url que no queremos que se comparta publicamente
 const dotenv = require('dotenv'); // Traemos el .env, es lo que permite asignar variables que queremos ocultar como usuarios y contraseñas en .env
 dotenv.config();
 

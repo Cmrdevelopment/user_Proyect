@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt'); // Es una libreria para el cifrado de contrase
 const validator = require('validator'); // es un validador de datos, ya sea email, iban y muchos más https://www.npmjs.com/package/validator
 
 // Sacamos de la libreria la parte de schema para poder definir nuestro modelo de datos
-/// Definimos el esqueleto del modelo character
+/// Definimos el esqueleto del modelo user
 /// 1) Definimos lo primero el TYPE ----> tipo de dato
 /// 2) Vamos a definir que este dato sea requerido para crear el modelo REQUIRED
 
